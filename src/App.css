@@ -1,142 +1,28 @@
-/* ================================
-   TRIPVISTA - GLOBAL APP STYLES
-================================ */
-
-* {
-  box-sizing: border-box;
+.airplane-container {
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+  width: 180px;
+  animation: flyAcross 3.5s cubic-bezier(0.45, 0.05, 0.22, 1.3) forwards;
 }
 
-html,
-body,
-#root {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-height: 100%;
+@keyframes flyAcross {
+  0% { transform: translate(0, 0) scale(0.8) rotate(15deg); }
+  50% { transform: translate(60vw, -50vh) scale(1.2) rotate(25deg); }
+  100% { transform: translate(140vw, -130vh) scale(0.9) rotate(35deg); }
 }
 
-html {
-  scroll-behavior: smooth;
+.intro-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f5f1e8;
-  color: #292621;
-
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
-
-  overflow-x: hidden;
-}
-
-/* ================================
-   MAIN APP
-================================ */
-
-.App {
-  width: 100%;
-  min-height: 100vh;
-
-  background: #f5f1e8;
-  color: #292621;
-
-  transition:
-    background-color 0.4s ease,
-    color 0.4s ease;
-}
-
-/* ================================
-   IMAGES
-================================ */
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* ================================
-   BUTTONS
-================================ */
-
-button {
-  font-family: inherit;
-}
-
-/* ================================
-   LINKS
-================================ */
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* ================================
-   SELECTION
-================================ */
-
-::selection {
-  background: #c49a55;
-  color: #ffffff;
-}
-
-/* ================================
-   SCROLLBAR
-================================ */
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f5f1e8;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c49a55;
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a97f3d;
-}
-
-/* ================================
-   DARK MODE
-================================ */
-
-body.dark-mode {
-  background: #171613;
-  color: #f4f0e7;
-}
-
-body.dark-mode .App {
-  background: #171613;
-  color: #f4f0e7;
-}
-
-body.dark-mode ::-webkit-scrollbar-track {
-  background: #171613;
-}
-
-body.dark-mode ::-webkit-scrollbar-thumb {
-  background: #c49a55;
-}
-
-/* ================================
-   RESPONSIVE
-================================ */
-
-@media (max-width: 900px) {
-  .App {
-    width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 14px;
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .airplane-container { width: 120px; }
+  @keyframes flyAcross {
+    0% { transform: translate(0, 0) scale(0.8) rotate(20deg); }
+    100% { transform: translate(150vw, -120vh) scale(1) rotate(40deg); }
   }
 }
