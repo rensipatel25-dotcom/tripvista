@@ -7,7 +7,7 @@ import Hero from "./Tripvista/Hero";
 import PopularDestinations from "./Tripvista/PopularDestinations";
 import TravelExperience from "./Tripvista/TravelExperience";
 import JourneyElevated from "./Tripvista/JourneyElevated";
-import CuratedEscapes from "./Tripvista/CuratedEscapes";
+// import CuratedEscapes from "./Tripvista/CuratedEscapes";
 import Mytrip from "./Tripvista/Mytrip";
 import Favorites from "./Tripvista/Favorites";
 import Footer from "./Tripvista/Footer";
